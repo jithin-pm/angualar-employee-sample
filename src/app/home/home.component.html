@@ -1,0 +1,12 @@
+<div>
+    <h5>Employee name : <span class="text-danger">{{name}}</span></h5>
+    <h5>Employee Designation : <span class="text-danger">{{designation}}</span></h5>
+    <h5>Employee Salary : <span class="text-danger">{{salary}}</span></h5>
+</div>
+
+<div class="m-5">
+    <input type="text" [(ngModel)]="name" name="empName" placeholder="name" class="form-control w-25 mt-3">
+    <input type="text" [(ngModel)]="designation" name="empDesignation"   placeholder="Designation" class="form-control w-25 mt-3">
+    <input type="text" [(ngModel)]="salary" name="salary"  placeholder="salary" class="form-control w-25 mt-3">
+    <button class="btn btn-success mt-3" (click)="updateEmploye()">Update Employee</button>
+</div>

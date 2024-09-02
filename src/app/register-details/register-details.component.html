@@ -1,0 +1,25 @@
+<h5>Employee Registration Details</h5>
+<h2>Employee Name: <span class="text-danger"> {{employeeName}}</span></h2>
+<h2>Employee Email: <span class="text-info"> {{employeeEmail}}</span></h2>
+<h2>Employee Password: <span class="text-warning">{{employeePassword}}</span></h2>
+
+
+<table class="table shadow w-50 m-5">
+    <thead><tr>
+        <th>product id</th>
+        <th>product name</th>
+        <th>price</th>
+      
+    </tr>
+
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let item of products; let i = index">
+            <td>{{item.productId }}</td>
+            <td>{{item.productName | uppercase}}</td>
+            <td>{{item.edition}}</td>
+            <td>{{item.price |  currency:'USD'}}</td>
+            
+        </tr>
+    </tbody>

@@ -1,0 +1,29 @@
+<p>dashboard works!</p>
+<h4>Employe email: <span class="text-danger">{{empEmail}}</span></h4>
+<h4>Password: <span class="text-success">{{empPass}}</span></h4>
+<button class="btn btn-danger" (click)="dashboard()">Back to login</button>
+
+<!-- *ngIf -->
+<button *ngIf="showLogoutButton" class="btn btn-warning ms-3">Login</button>
+
+
+    <table class="table shadow w-50 m-5">
+        <thead><tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Role</th>
+        </tr>
+
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let employee of employeeDetails; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.age}}</td>
+                <td>{{employee.role}}</td>
+            </tr>
+        </tbody>
+        
+    </table>
